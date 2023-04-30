@@ -1,7 +1,15 @@
 drop table if exists people;
+drop table if exists established_churches;
 
 
-
+create table established_churches (
+	id serial not null,
+	name varchar(255) not null,
+	disestablished_on date,
+	wikidata_id varchar(16) not null,
+	note text,
+	primary key (id)
+);
 create table people (
 	id serial not null,
 	forenames varchar(255) not null,
