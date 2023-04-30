@@ -16,7 +16,12 @@
 <body>
 <header>
 
-<%= content_tag( 'span', link_to( 'People', person_list_url ) ) %>
+<!-- %= content_tag( 'span', link_to( 'People', person_list_url ) ) % -->
+<nav>
+	<%= link_to( 'People', person_list_url ) %>
+			- 
+	<%= link_to( 'Established churches', established_church_list_url ) %>
+</nav>
 
 </header>
 <main> 
