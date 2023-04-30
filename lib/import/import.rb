@@ -29,4 +29,21 @@ module IMPORT
       person.save
     end
   end
+  
+  # ## A method to import established churches.
+  def import_established_churches
+    puts "Importing established churches"
+
+    # For each row in the established churches data file ...
+    CSV.foreach( 'db/data/established-churches.tsv', :col_sep => "\t" ) do |row|
+      
+      # ... we create a new established church.
+      established_church = EstablishedChurch.new
+      established_church.name = row[0]
+      established_church.disestablished_on = row[1]
+      established_church.wikidata_id = row[2]
+      established_church.note = row[3]
+      established_church.save
+    end
+  end
 end
