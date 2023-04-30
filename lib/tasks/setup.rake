@@ -1,3 +1,4 @@
 task :setup => [
-  :import_people] do
+  :import_people,
+  :import_established_churches] do
 end
