@@ -2,6 +2,16 @@ class LordBishopDiocese < ApplicationRecord
   
   belongs_to :established_church
   
+  def incumbent_title
+    incumbent_title = ''
+    if self.is_archdiocese
+      incumbent_title = 'Archbishop'
+    else
+      incumbent_title = 'Bishop'
+    end
+    incumbent_title
+  end
+  
   def list_display_label
     list_display_label = self.most_recent_name
     list_display_label += ' ('  + self.dates_as_year_display + ')' if self.start_year
@@ -69,5 +79,17 @@ class LordBishopDiocese < ApplicationRecord
       when 12
         'December'
     end
+  end
+  
+  def lord_bishop_diocese_incumbencies
+    LordBishopDioceseIncumbency.find_by_sql(
+      "
+        SELECT lbdi.*, p.forenames AS person_forenames, p.surname AS person_surname
+        FROM lord_bishop_diocese_incumbencies lbdi, people p
+        WHERE lbdi.person_id = p.id
+        AND lbdi.lord_bishop_diocese_id = #{self.id}
+        ORDER BY lbdi.start_year, lbdi.start_month, lbdi.start_day, lbdi.end_year, lbdi.end_month, lbdi.end_day
+      "
+    )
   end
 end
