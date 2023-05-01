@@ -74,4 +74,16 @@ class Person < ApplicationRecord
         'December'
     end
   end
+  
+  def lord_bishop_diocese_incumbencies
+    LordBishopDioceseIncumbency.find_by_sql(
+      "
+        SELECT lbdi.*, lbd.is_archdiocese AS lord_bishop_diocese_is_archdiocese, lbd.most_recent_name AS lord_bishop_diocese_most_recent_name
+        FROM lord_bishop_diocese_incumbencies lbdi, lord_bishop_dioceses lbd
+        WHERE lbdi.lord_bishop_diocese_id = lbd.id
+        AND lbdi.person_id = #{self.id}
+        ORDER BY lbdi.start_year, lbdi.start_month, lbdi.start_day, lbdi.end_year, lbdi.end_month, lbdi.end_day
+      "
+    )
+  end
 end
