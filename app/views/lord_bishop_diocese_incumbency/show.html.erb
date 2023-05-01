@@ -1,0 +1,7 @@
+<%= content_tag( 'p', @lord_bishop_diocese_incumbency.date_range ) %>
+
+<%= content_tag( 'p', "Incumbent: #{link_to( @lord_bishop_diocese_incumbency.person_name, person_show_url( :person => @lord_bishop_diocese_incumbency.person_id ) )}".html_safe ) %>
+
+<%= content_tag( 'p', "Incumbent in: #{link_to( @lord_bishop_diocese_incumbency.lord_bishop_diocese_most_recent_name, lord_bishop_diocese_show_url( :lord_bishop_diocese => @lord_bishop_diocese_incumbency.lord_bishop_diocese_id ) )}".html_safe ) %>
+
+<%= content_tag( 'p', "End reason: #{link_to( @lord_bishop_diocese_incumbency.lord_bishop_diocese_incumbency_end_reason.reason, lord_bishop_diocese_incumbency_end_reason_show_url( :lord_bishop_diocese_incumbency_end_reason => @lord_bishop_diocese_incumbency.lord_bishop_diocese_incumbency_end_reason_id ) )}".html_safe ) if @lord_bishop_diocese_incumbency.lord_bishop_diocese_incumbency_end_reason_id %>
