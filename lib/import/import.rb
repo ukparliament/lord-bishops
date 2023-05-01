@@ -80,13 +80,45 @@ module IMPORT
   def import_lord_bishop_diocese_incumbency_end_reasons
     puts "Importing lord bishop diocese incumbency end reasons"
 
-    # For each row in the lord bishop diocese incumbency end reason data file ...
+    # For each row in the lord bishop diocese incumbency end reasons data file ...
     CSV.foreach( 'db/data/lord-bishop-diocese-incumbency-end-reasons.tsv', :col_sep => "\t" ) do |row|
       
       # ... we create a new lord bishop diocese incumbency end reason.
       lord_bishop_diocese_incumbency_end_reason = LordBishopDioceseIncumbencyEndReason.new
       lord_bishop_diocese_incumbency_end_reason.reason = row[0]
       lord_bishop_diocese_incumbency_end_reason.save
+    end
+  end
+  
+  def import_lord_bishop_diocese_incumbencies
+    puts "Importing lord bishop diocese incumbencies"
+
+    # For each row in the lord bishop diocese incumbencies data file ...
+    CSV.foreach( 'db/data/lord-bishop-diocese-incumbencies.tsv', :col_sep => "\t" ) do |row|
+      
+      # ... we find the person ...
+      person = Person.find_by_link_on( row[0] )
+      
+      # ... find the diocese ...
+      lord_bishop_diocese = LordBishopDiocese.find_by_link_on( row[1] )
+      
+      # ... and find the end reason, if any.
+      lord_bishop_diocese_incumbency_end_reason = LordBishopDioceseIncumbencyEndReason.find_by_reason( row[8] ) if row[8]
+      
+      # We create a lord bishop diocese incumbency record.
+      lord_bishop_diocese_incumbency = LordBishopDioceseIncumbency.new
+      lord_bishop_diocese_incumbency.start_year = row[2]
+      lord_bishop_diocese_incumbency.start_month = row[3]
+      lord_bishop_diocese_incumbency.start_day = row[4]
+      lord_bishop_diocese_incumbency.end_year = row[5]
+      lord_bishop_diocese_incumbency.end_month = row[6]
+      lord_bishop_diocese_incumbency.end_day = row[7]
+      lord_bishop_diocese_incumbency.note = row[9]
+      lord_bishop_diocese_incumbency.link_on = row[10]
+      lord_bishop_diocese_incumbency.person = person
+      lord_bishop_diocese_incumbency.lord_bishop_diocese = lord_bishop_diocese
+      lord_bishop_diocese_incumbency.lord_bishop_diocese_incumbency_end_reason = lord_bishop_diocese_incumbency_end_reason if lord_bishop_diocese_incumbency_end_reason
+      lord_bishop_diocese_incumbency.save
     end
   end
 end
