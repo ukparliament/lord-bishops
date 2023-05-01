@@ -72,7 +72,7 @@ module IMPORT
       lord_bishop_diocese.wikidata_id = row[10]
       lord_bishop_diocese.established_church = established_church
       lord_bishop_diocese.link_on = row[12]
-      lord_bishop_diocese.note = row[12]
+      lord_bishop_diocese.note = row[13]
       lord_bishop_diocese.save
     end
   end
