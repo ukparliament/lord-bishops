@@ -1,0 +1,3 @@
+<%= content_tag( 'p', "Disestablished on: #{@established_church.disestablished_on.strftime( '%A, %-d %B %Y')}" ) if @established_church.disestablished_on %>
+
+<%= content_tag( 'p', "Wikidata ID: #{link_to( @established_church.wikidata_id, "https://www.wikidata.org/wiki/#{@established_church.wikidata_id}" )}".html_safe ) if @established_church.wikidata_id %>
