@@ -1,3 +1,4 @@
+drop table if exists lord_bishop_dioceses;
 drop table if exists people;
 drop table if exists established_churches;
 
@@ -25,5 +26,24 @@ create table people (
 	mnis_id int,
 	note text,
 	link_on varchar(500) not null,
+	primary key (id)
+);
+create table lord_bishop_dioceses (
+	id serial not null,
+	most_recent_name varchar(255) not null,
+	start_year int,
+	start_month int,
+	start_day int,
+	end_year int,
+	end_month int,
+	end_day int,
+	gazette_url varchar(255),
+	is_named_see boolean default false,
+	is_archdiocese boolean default false,
+	wikidata_id varchar(16) not null,
+	note text,
+	link_on varchar(500) not null,
+	established_church_id int not null,
+	constraint fk_established_church foreign key (established_church_id) references established_churches(id),
 	primary key (id)
 );
