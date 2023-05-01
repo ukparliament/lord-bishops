@@ -1,3 +1,30 @@
 <%= content_tag( 'p', "Disestablished on: #{@established_church.disestablished_on.strftime( '%A, %-d %B %Y')}" ) if @established_church.disestablished_on %>
 
 <%= content_tag( 'p', "Wikidata ID: #{link_to( @established_church.wikidata_id, "https://www.wikidata.org/wiki/#{@established_church.wikidata_id}" )}".html_safe ) if @established_church.wikidata_id %>
+
+<% unless @established_church.archdioceses.empty? -%>
+	<div id="archdioceses">
+		<%= content_tag( 'h2', 'Archdioceses' ) %>
+		<ul>
+			<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.archdioceses %>
+		</ul>
+	</div>
+<% end -%>
+
+<% unless @established_church.named_dioceses.empty? -%>
+	<div id="named-dioceses">
+		<%= content_tag( 'h2', 'Named dioceses' ) %>
+		<ul>
+			<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.named_dioceses %>
+		</ul>
+	</div>
+<% end -%>
+
+<% unless @established_church.other_dioceses.empty? -%>
+	<div id="other-dioceses">
+		<%= content_tag( 'h2', 'Dioceses' ) %>
+		<ul>
+			<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.other_dioceses %>
+		</ul>
+	</div>
+<% end -%>
