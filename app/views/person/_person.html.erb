@@ -1,1 +1,1 @@
-<%= content_tag( 'li', person.list_display_label  )%>
+<%= content_tag( 'li', link_to( person.list_display_label, person_show_url( :person => person ) ) ) %>
