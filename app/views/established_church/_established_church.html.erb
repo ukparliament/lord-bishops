@@ -1,1 +1,1 @@
-<%= content_tag( 'li', established_church.name ) %>
+<%= content_tag( 'li', link_to( established_church.name, established_church_show_url( :established_church => established_church ) ) ) %>
