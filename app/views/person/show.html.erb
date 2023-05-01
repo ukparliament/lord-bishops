@@ -1,0 +1,7 @@
+<%= content_tag( 'p', @person.lifespan ) %>
+
+<%= content_tag( 'p', "Wikidata ID: #{link_to( @person.wikidata_id, "https://www.wikidata.org/wiki/#{@person.wikidata_id}" )}".html_safe ) if @person.wikidata_id %>
+
+<%= content_tag( 'p', "MNIS ID: #{link_to( @person.mnis_id, "https://members.parliament.uk/member/#{@person.mnis_id}" )}".html_safe ) if @person.mnis_id %>
+
+<%= content_tag( 'p', "Is advanced under the #{link_to( 'Lords Spiritual (Women) Act 2015', 'https://www.legislation.gov.uk/ukpga/2015/18' )}: #{@person.is_advanced_under_lords_spiritual_women_act_2015}".html_safe ) %>
