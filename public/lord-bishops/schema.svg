@@ -85,25 +85,25 @@
         <title>Class with Attributes</title>
         <g id="Graphic_41">
           <title>Attributes</title>
-          <rect x="-289.25" y="83" width="328" height="250" fill="aqua"/>
+          <rect x="-289.25" y="83" width="328" height="250" fill="yellow"/>
           <rect x="-289.25" y="83" width="328" height="250" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-283.25 89)" fill="#515556">
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="35">person_id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="57">lord_bishop_diocese_id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="79">start_year</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="101">start_month</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="123">start_day</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="145">end_year</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="167">end_month</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="189">end_day</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="35">start_year</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="57">start_month</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="79">start_day</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="101">end_year</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="123">end_month</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="145">end_day</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="167">person_id</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="189">lord_bishop_diocese_id</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="211">lord_bishop_diocese_incumbency_end_reason_id</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="233">note</tspan>
           </text>
         </g>
         <g id="Graphic_40">
           <title>Class Name</title>
-          <rect x="-289.25" y="57" width="328" height="26" fill="aqua"/>
+          <rect x="-289.25" y="57" width="328" height="26" fill="yellow"/>
           <rect x="-289.25" y="57" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-283.25 61)" fill="#515556">
             <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="51.452" y="13">lord_bishop_diocese_incumbencies</tspan>
@@ -213,7 +213,7 @@
         </g>
       </g>
       <g id="Line_58">
-        <line x1="-125.25" y1="352.5" x2="-125.25" y2="390.75" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <line x1="-125.25" y1="352.5" x2="-125.25" y2="390.75" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
       </g>
       <g id="Group_59">
         <title>Class with Attributes</title>
