@@ -53,7 +53,7 @@
         <title>Class with Attributes</title>
         <g id="Graphic_44">
           <title>Attributes</title>
-          <rect x="-767" y="50" width="328" height="316" fill="aqua"/>
+          <rect x="-767" y="50" width="328" height="316" fill="#ccc"/>
           <rect x="-767" y="50" width="328" height="316" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-761 56)" fill="#515556">
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
@@ -67,14 +67,14 @@
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="189">gazette_url</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="211">is_named_see</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="233">is_archdiocese</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="255">established_church_id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="277">wikidata_id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="299">note</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="255">wikidata_id</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="277">note</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="299">established_church_id</tspan>
           </text>
         </g>
         <g id="Graphic_43">
           <title>Class Name</title>
-          <rect x="-767" y="24" width="328" height="26" fill="aqua"/>
+          <rect x="-767" y="24" width="328" height="26" fill="#ccc"/>
           <rect x="-767" y="24" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-761 28)" fill="#515556">
             <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="92.753" y="13">lord_bishop_dioceses</tspan>
