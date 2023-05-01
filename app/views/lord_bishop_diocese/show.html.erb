@@ -2,9 +2,9 @@
 
 <%= content_tag( 'p', @lord_bishop_diocese.lifespan ) if @lord_bishop_diocese.start_year %>
 
-<%= content_tag( 'p', "Is a named see: #{@lord_bishop_diocese.is_named_see}" ) %>
-
 <%= content_tag( 'p', "Is archdiocese: #{@lord_bishop_diocese.is_archdiocese}" ) %>
+
+<%= content_tag( 'p', "Is a named see: #{@lord_bishop_diocese.is_named_see}" ) %>
 
 <%= content_tag( 'p', "Wikidata ID: #{link_to( @lord_bishop_diocese.wikidata_id, "https://www.wikidata.org/wiki/#{@lord_bishop_diocese.wikidata_id}" )}".html_safe ) if @lord_bishop_diocese.wikidata_id %>
 
