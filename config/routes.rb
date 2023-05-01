@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   
   get 'lord-bishops/established-churches' => 'established_church#index', :as => 'established_church_list'
    get 'lord-bishops/established-churches/:established_church' => 'established_church#show', :as => 'established_church_show'
+  
+  get 'lord-bishops/lord-bishop-dioceses' => 'lord_bishop_diocese#index', :as => 'lord_bishop_diocese_list'
+  get 'lord-bishops/lord-bishop-dioceses/:lord_bishop_diocese' => 'lord_bishop_diocese#show', :as => 'lord_bishop_diocese_show'
 end
