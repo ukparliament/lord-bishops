@@ -1,0 +1,11 @@
+<%= content_tag( 'p', "A diocese in the #{link_to( @lord_bishop_diocese.established_church.name, established_church_show_url( :established_church => @lord_bishop_diocese.established_church ) )}.".html_safe ) %>
+
+<%= content_tag( 'p', @lord_bishop_diocese.lifespan ) if @lord_bishop_diocese.start_year %>
+
+<%= content_tag( 'p', "Is a named see: #{@lord_bishop_diocese.is_named_see}" ) %>
+
+<%= content_tag( 'p', "Is archdiocese: #{@lord_bishop_diocese.is_archdiocese}" ) %>
+
+<%= content_tag( 'p', "Wikidata ID: #{link_to( @lord_bishop_diocese.wikidata_id, "https://www.wikidata.org/wiki/#{@lord_bishop_diocese.wikidata_id}" )}".html_safe ) if @lord_bishop_diocese.wikidata_id %>
+
+<%= content_tag( 'p', "Gazette URL: #{link_to( @lord_bishop_diocese.gazette_url, @lord_bishop_diocese.gazette_url )}".html_safe ) if @lord_bishop_diocese.gazette_url %>
