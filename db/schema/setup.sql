@@ -1,3 +1,4 @@
+drop table if exists lord_bishop_diocese_incumbencies;
 drop table if exists lord_bishop_dioceses;
 drop table if exists people;
 drop table if exists established_churches;
@@ -53,3 +54,22 @@ create table lord_bishop_dioceses (
 	constraint fk_established_church foreign key (established_church_id) references established_churches(id),
 	primary key (id)
 );
+create table lord_bishop_diocese_incumbencies (
+	id serial not null,
+	start_year int,
+	start_month int,
+	start_day int,
+	end_year int,
+	end_month int,
+	end_day int,
+	note text,
+	link_on varchar(255) not null,
+	person_id int not null,
+	lord_bishop_diocese_id int not null,
+	lord_bishop_diocese_incumbency_end_reason_id int,
+	constraint fk_person foreign key (person_id) references people(id),
+	constraint fk_lord_bishop_diocese foreign key (lord_bishop_diocese_id) references lord_bishop_dioceses(id),
+	constraint fk_lord_bishop_diocese_incumbency_end_reason foreign key (lord_bishop_diocese_incumbency_end_reason_id) references lord_bishop_diocese_incumbency_end_reasons(id),
+	primary key (id)
+);
+
