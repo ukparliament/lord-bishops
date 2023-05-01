@@ -46,4 +46,34 @@ module IMPORT
       established_church.save
     end
   end
+  
+  # ## A method to import lord bishop dioceses.
+  def import_lord_bishop_dioceses
+    puts "Importing lord bishop dioceses"
+
+    # For each row in the lord bishop dioceses data file ...
+    CSV.foreach( 'db/data/lord-bishop-dioceses.tsv', :col_sep => "\t" ) do |row|
+      
+      # ... we find the accociated established church ...
+      established_church = EstablishedChurch.find_by_name( row[11] )
+      
+      # ... and create a new person record.
+      lord_bishop_diocese = LordBishopDiocese.new
+      lord_bishop_diocese.most_recent_name = row[0]
+      lord_bishop_diocese.start_year = row[1]
+      lord_bishop_diocese.start_month = row[2]
+      lord_bishop_diocese.start_day = row[3]
+      lord_bishop_diocese.end_year = row[4]
+      lord_bishop_diocese.end_month = row[5]
+      lord_bishop_diocese.end_day = row[6]
+      lord_bishop_diocese.gazette_url = row[7]
+      lord_bishop_diocese.is_named_see = row[8]
+      lord_bishop_diocese.is_archdiocese = row[9]
+      lord_bishop_diocese.wikidata_id = row[10]
+      lord_bishop_diocese.established_church = established_church
+      lord_bishop_diocese.link_on = row[12]
+      lord_bishop_diocese.note = row[12]
+      lord_bishop_diocese.save
+    end
+  end
 end
