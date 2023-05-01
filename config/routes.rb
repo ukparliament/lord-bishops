@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get 'lord-bishops/lord-bishop-dioceses' => 'lord_bishop_diocese#index', :as => 'lord_bishop_diocese_list'
   get 'lord-bishops/lord-bishop-dioceses/:lord_bishop_diocese' => 'lord_bishop_diocese#show', :as => 'lord_bishop_diocese_show'
   
+  get 'lord-bishops/lord-bishop-diocese-incumbencies' => 'lord_bishop_diocese_incumbency#index', :as => 'lord_bishop_diocese_incumbency_list'
+  get 'lord-bishops/lord-bishop-diocese-incumbencies/:lord_bishop_diocese_incumbency' => 'lord_bishop_diocese_incumbency#show', :as => 'lord_bishop_diocese_incumbency_show'
+  
   get 'lord-bishops/lord-bishop-diocese-incumbency-end-reasons' => 'lord_bishop_diocese_incumbency_end_reason#index', :as => 'lord_bishop_diocese_incumbency_end_reason_list'
   get 'lord-bishops/lord-bishop-diocese-incumbency-end-reasons/:lord_bishop_diocese_incumbency_end_reason' => 'lord_bishop_diocese_incumbency_end_reason#show', :as => 'lord_bishop_diocese_incumbency_end_reason_show'
 end
