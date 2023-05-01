@@ -1,8 +1,14 @@
 drop table if exists lord_bishop_dioceses;
 drop table if exists people;
 drop table if exists established_churches;
+drop table if exists lord_bishop_diocese_incumbency_end_reasons;
 
 
+create table lord_bishop_diocese_incumbency_end_reasons (
+	id serial not null,
+	reason varchar(255) not null,
+	primary key (id)
+);
 create table established_churches (
 	id serial not null,
 	name varchar(255) not null,

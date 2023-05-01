@@ -76,4 +76,17 @@ module IMPORT
       lord_bishop_diocese.save
     end
   end
+  
+  def import_lord_bishop_diocese_incumbency_end_reasons
+    puts "Importing lord bishop diocese incumbency end reasons"
+
+    # For each row in the lord bishop diocese incumbency end reason data file ...
+    CSV.foreach( 'db/data/lord-bishop-diocese-incumbency-end-reasons.tsv', :col_sep => "\t" ) do |row|
+      
+      # ... we create a new lord bishop diocese incumbency end reason.
+      lord_bishop_diocese_incumbency_end_reason = LordBishopDioceseIncumbencyEndReason.new
+      lord_bishop_diocese_incumbency_end_reason.reason = row[0]
+      lord_bishop_diocese_incumbency_end_reason.save
+    end
+  end
 end
