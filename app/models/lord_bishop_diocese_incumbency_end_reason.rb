@@ -1,0 +1,2 @@
+class LordBishopDioceseIncumbencyEndReason < ApplicationRecord
+end
