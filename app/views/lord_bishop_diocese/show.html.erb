@@ -1,11 +1,21 @@
-<%= content_tag( 'p', "A diocese in the #{link_to( @lord_bishop_diocese.established_church.name, established_church_show_url( :established_church => @lord_bishop_diocese.established_church ) )}.".html_safe ) %>
+<div id="details">
+	<%= content_tag( 'p', "A diocese in the #{link_to( @lord_bishop_diocese.established_church.name, established_church_show_url( :established_church => @lord_bishop_diocese.established_church ) )}.".html_safe ) %>
 
-<%= content_tag( 'p', @lord_bishop_diocese.lifespan ) if @lord_bishop_diocese.start_year %>
+	<%= content_tag( 'p', @lord_bishop_diocese.lifespan ) if @lord_bishop_diocese.start_year %>
 
-<%= content_tag( 'p', "Is archdiocese: #{@lord_bishop_diocese.is_archdiocese}" ) %>
+	<%= content_tag( 'p', "Gazette URL: #{link_to( @lord_bishop_diocese.gazette_url, @lord_bishop_diocese.gazette_url )}".html_safe ) if @lord_bishop_diocese.gazette_url %>
+	
+	<% if @lord_bishop_diocese.is_named_see -%>
+		<%= content_tag( 'p', "#{@lord_bishop_diocese.most_recent_name} is one of the five dioceses named in #{link_to( 'section 5 of the Bishoprics Act 1878', 'https://www.legislation.gov.uk/ukpga/Vict/41-42/68/section/5' )}.".html_safe ) %>
+	<% end -%>
+	
+	<%= content_tag( 'p', "Its diocesan bishop is styled as #{@lord_bishop_diocese.incumbent_title}." ) %>
 
-<%= content_tag( 'p', "Is a named see: #{@lord_bishop_diocese.is_named_see}" ) %>
+	<%= content_tag( 'p', "Wikidata ID: #{link_to( @lord_bishop_diocese.wikidata_id, "https://www.wikidata.org/wiki/#{@lord_bishop_diocese.wikidata_id}" )}".html_safe ) if @lord_bishop_diocese.wikidata_id %>
+</div>
 
-<%= content_tag( 'p', "Wikidata ID: #{link_to( @lord_bishop_diocese.wikidata_id, "https://www.wikidata.org/wiki/#{@lord_bishop_diocese.wikidata_id}" )}".html_safe ) if @lord_bishop_diocese.wikidata_id %>
-
-<%= content_tag( 'p', "Gazette URL: #{link_to( @lord_bishop_diocese.gazette_url, @lord_bishop_diocese.gazette_url )}".html_safe ) if @lord_bishop_diocese.gazette_url %>
+<div id="incumbents">
+	<%= content_tag( 'h2', 'Incumbents' ) %>
+	<ul>
+		<%= render :partial => 'lord_bishop_diocese_incumbency/lord_bishop_diocese_incumbency_from_diocese', :collection => @lord_bishop_diocese.lord_bishop_diocese_incumbencies %>
+</div>
