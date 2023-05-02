@@ -55,4 +55,28 @@ class LordBishopDioceseIncumbency < ApplicationRecord
     end
     end_date
   end
+  
+  def translated_from
+    Translation.find_by_sql(
+      "
+        SELECT t.*, lbd.is_archdiocese AS from_is_archdiocese, lbd.most_recent_name AS from_diocese_name
+        FROM translations t, lord_bishop_diocese_incumbencies lbdi, lord_bishop_dioceses lbd
+        WHERE t.to_lord_bishop_diocese_incumbency_id = #{self.id}
+        AND t.from_lord_bishop_diocese_incumbency_id = lbdi.id
+        AND lbdi.lord_bishop_diocese_id = lbd.id
+      "
+    ).first
+  end
+  
+  def translated_to
+    Translation.find_by_sql(
+      "
+        SELECT t.*, lbd.is_archdiocese AS to_is_archdiocese, lbd.most_recent_name AS to_diocese_name
+        FROM translations t, lord_bishop_diocese_incumbencies lbdi, lord_bishop_dioceses lbd
+        WHERE t.from_lord_bishop_diocese_incumbency_id = #{self.id}
+        AND t.to_lord_bishop_diocese_incumbency_id = lbdi.id
+        AND lbdi.lord_bishop_diocese_id = lbd.id
+      "
+    ).first
+  end
 end
