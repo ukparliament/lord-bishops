@@ -121,4 +121,25 @@ module IMPORT
       lord_bishop_diocese_incumbency.save
     end
   end
+  
+  def import_translations
+    puts "Importing translations"
+
+    # For each row in the ltranslations data file ...
+    CSV.foreach( 'db/data/translations.tsv', :col_sep => "\t" ) do |row|
+      
+      # ... we find the lord bishop diocese incumbency the translation is from ...
+      from_lord_bishop_diocese_incumbency = LordBishopDioceseIncumbency.find_by_link_on( row[0] )
+      
+      # ... the lord bishop diocese incumbency the translation is to ...
+      to_lord_bishop_diocese_incumbency = LordBishopDioceseIncumbency.find_by_link_on( row[1] )
+      
+      # ... and create a new translation.
+      translation = Translation.new
+      translation.from_lord_bishop_diocese_incumbency_id = from_lord_bishop_diocese_incumbency.id
+      translation.to_lord_bishop_diocese_incumbency_id = to_lord_bishop_diocese_incumbency.id
+      translation.note = row[3]
+      translation.save
+    end
+  end
 end
