@@ -1,0 +1,5 @@
+<li>
+	<%= content_tag( 'h2', link_to( translation.person_name, person_show_url( :person => translation.person_id ) ) ) %>
+	<%= content_tag( 'p', "From #{link_to( translation.from_bishop_title, lord_bishop_diocese_incumbency_show_url( :lord_bishop_diocese_incumbency => translation.from_lord_bishop_diocese_incumbency_id ) )} to #{link_to( translation.to_bishop_title, lord_bishop_diocese_incumbency_show_url( :lord_bishop_diocese_incumbency => translation.to_lord_bishop_diocese_incumbency_id ) )}.".html_safe ) %>
+	<%= content_tag( 'p', "New incumbency started #{translation.to_incumbency_start_date}." ) if translation.to_incumbency_year %>
+</li>
