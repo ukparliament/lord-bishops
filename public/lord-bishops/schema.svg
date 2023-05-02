@@ -169,28 +169,29 @@
         <title>Class with Attributes</title>
         <g id="Graphic_52">
           <title>Attributes</title>
-          <rect x="-289.25" y="-100" width="328" height="74" fill="aqua"/>
-          <rect x="-289.25" y="-100" width="328" height="74" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-          <text transform="translate(-283.25 -94)" fill="#515556">
+          <rect x="-289.25" y="-120" width="328" height="96" fill="#ccc"/>
+          <rect x="-289.25" y="-120" width="328" height="96" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <text transform="translate(-283.25 -114)" fill="#515556">
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="35">from_lord_bishop_diocese_incumbency_id</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="57">to_lord_bishop_diocese_incumbency_id</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="79">note</tspan>
           </text>
         </g>
         <g id="Graphic_51">
           <title>Class Name</title>
-          <rect x="-289.25" y="-126" width="328" height="26" fill="aqua"/>
-          <rect x="-289.25" y="-126" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-          <text transform="translate(-283.25 -122)" fill="#515556">
+          <rect x="-289.25" y="-146" width="328" height="26" fill="#ccc"/>
+          <rect x="-289.25" y="-146" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <text transform="translate(-283.25 -142)" fill="#515556">
             <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="122.848" y="13">translations</tspan>
           </text>
         </g>
       </g>
       <g id="Line_53">
-        <path d="M -93.17205 -8.639287 C -84.58547 8.682801 -77.33367 27.091363 -76.16454 41.57528" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <path d="M -86.3439 -6.0688604 C -82.50835 4.195123 -80 14.528315 -80 24 C -80 32.274193 -81.91419 39.0907 -84.95516 44.699123" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
       </g>
       <g id="Line_54">
-        <path d="M -157.01268 -8.639726 C -165.60572 8.520491 -173.15346 26.817798 -175.35416 41.507103" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <path d="M -167.95024 -6.141438 C -171.05506 2.3323985 -173 10.880883 -173 19 C -173 29.94135 -169.46792 38.70364 -164.32504 45.662836" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
       </g>
       <g id="Group_55">
         <title>Class with Attributes</title>
