@@ -4,33 +4,25 @@
 	<title><%= @page_title || 'Lord Bishops' %>
 	</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<style>		body {font-family: system-ui;padding:1rem;font-size:1.2rem;max-width:44rem;margin:0.5rem auto;}
-		h1, h2, h3, h4 {font-weight:normal;}
-		th, td {text-align: left;vertical-align: top;padding: 0.75rem;font-weight:normal;margin:0;}
-		tr:nth-child(even) {background-color: #f2f2f2;}
-		td ul {list-style:none;margin:0;padding:0;}
-		main {line-height:1.4;}
-		footer {line-height:1.4;padding-top:2rem;}
-	</style>
+	<style>
+				body {
+					max-width: 80ch;
+					padding:1.5ch;
+					font-size: clamp( 1rem, 80vw, 1.2rem); 
+					margin: auto;
+						}
+		 h1 {font-weight: normal;}
+		 main {margin-bottom: 4rem;
+		 line-height: 1.4;}
+		 footer {line-height:1.4;}
+				</style>
 </head>
 <body>
 <header>
 
 	
 <%= content_tag( 'p', link_to( 'Lord bishops', home_url ) ) %>
-<nav>
-	<%= link_to( 'People', person_list_url ) %>
-			- 
-	<%= link_to( 'Lord bishop dioceses', lord_bishop_diocese_list_url ) %>
-			- 
-	<%= link_to( 'Lord bishop diocese incumbencies', lord_bishop_diocese_incumbency_list_url ) %>
-			- 
-	<%= link_to( 'Translations', translation_list_url ) %>
-			- 
-	<%= link_to( 'Lord bishop diocese incumbency end reasons', lord_bishop_diocese_incumbency_end_reason_list_url ) %>
-			- 
-	<%= link_to( 'Established churches', established_church_list_url ) %>
-</nav>
+
 
 </header>
 <main> 
@@ -38,9 +30,26 @@
 
 <%= yield %>
 </main> 
+
 <footer>
+
+<nav>
+	<%= link_to( 'People', person_list_url ) %>
+<br>
+	<%= link_to( 'Incumbencies', lord_bishop_diocese_incumbency_list_url ) %>
+
+			- 
+	<%= link_to( 'Incumbency end reasons', lord_bishop_diocese_incumbency_end_reason_list_url ) %>
+	<br>
+	<%= link_to( 'Dioceses', lord_bishop_diocese_list_url ) %>
+			- 
+	<%= link_to( 'Translations', translation_list_url ) %>
+		-
+	<%= link_to( 'Churches', established_church_list_url ) %>
+</nav>
+
 	<p>
-			This site includes information made available at parliament.uk under the <a href='https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/' rel='licence'>Open Parliament Licence</a>.
+			This site includes information made available under the <a href='https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/' rel='licence'>Open Parliament Licence</a>.
 		</p>
 
 </footer>
