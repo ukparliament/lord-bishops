@@ -18,4 +18,14 @@
 	<%= content_tag( 'h2', 'Incumbents' ) %>
 	<ul>
 		<%= render :partial => 'lord_bishop_diocese_incumbency/lord_bishop_diocese_incumbency_from_diocese', :collection => @lord_bishop_diocese.lord_bishop_diocese_incumbencies %>
+	</ul>
 </div>
+
+<% unless @lord_bishop_diocese.lord_bishop_diocese_names.empty? -%>
+	<div id="name-changes">
+		<%= content_tag( 'h2', 'Name changes' ) %>
+		<ul>
+			<%= render :partial => 'lord_bishop_diocese_name/lord_bishop_diocese_name_from_diocese', :collection => @lord_bishop_diocese.lord_bishop_diocese_names %>
+		</ul>
+	</div>
+<% end -%>
