@@ -2,29 +2,37 @@
 
 <%= content_tag( 'p', "Wikidata ID: #{link_to( @established_church.wikidata_id, "https://www.wikidata.org/wiki/#{@established_church.wikidata_id}" )}".html_safe ) if @established_church.wikidata_id %>
 
-<% unless @established_church.archdioceses.empty? -%>
-	<div id="archdioceses">
-		<%= content_tag( 'h2', 'Archdioceses' ) %>
-		<ul>
-			<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.archdioceses %>
-		</ul>
-	</div>
-<% end -%>
-
 <% unless @established_church.named_dioceses.empty? -%>
 	<div id="named-dioceses">
 		<%= content_tag( 'h2', 'Named dioceses' ) %>
-		<ul>
-			<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.named_dioceses %>
-		</ul>
+		<%= content_tag( 'p', "Dioceses named in #{link_to( 'section 5 of the Bishoprics Act 1878', 'https://www.legislation.gov.uk/ukpga/Vict/41-42/68/section/5' )}.".html_safe ) %>
+		
+		
+		<% unless @established_church.named_archdioceses.empty? %>
+			<div id="named-archdioceses">
+				<%= content_tag( 'h3', 'Archdioceses' ) %>
+				<ul>
+					<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.named_archdioceses %>
+				</ul>
+			</div>
+		<% end -%>
+		
+		<% unless @established_church.named_non_archdioceses.empty? %>
+			<div id="named-non-archdioceses">
+				<%= content_tag( 'h3', 'Other named dioceses' ) %>
+				<ul>
+					<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.named_non_archdioceses %>
+				</ul>
+			</div>
+		<% end -%>
 	</div>
 <% end -%>
 
-<% unless @established_church.other_dioceses.empty? -%>
-	<div id="other-dioceses">
-		<%= content_tag( 'h2', 'Dioceses' ) %>
+<% unless @established_church.unnamed_dioceses.empty? -%>
+	<div id="unnamed-dioceses">
+		<%= content_tag( 'h2', 'Unnamed dioceses' ) %>
 		<ul>
-			<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.other_dioceses %>
+			<%= render :partial => 'lord_bishop_diocese/lord_bishop_diocese', :collection => @established_church.unnamed_dioceses %>
 		</ul>
 	</div>
 <% end -%>
