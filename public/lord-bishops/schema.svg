@@ -231,8 +231,8 @@
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="123">end_year</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="145">end_month</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="167">end_day</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="189">english_diocese_id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="211">note</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="189">note</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="211">english_diocese_id</tspan>
           </text>
         </g>
         <g id="Graphic_60">
