@@ -1,3 +1,4 @@
+drop table if exists lord_bishop_diocese_names;
 drop table if exists translations;
 drop table if exists lord_bishop_diocese_incumbencies;
 drop table if exists lord_bishop_dioceses;
@@ -82,4 +83,17 @@ create table translations (
 	constraint fk_to_incumbency foreign key (to_lord_bishop_diocese_incumbency_id) references lord_bishop_diocese_incumbencies(id),
 	primary key (id)
 );
-
+create table lord_bishop_diocese_names (
+	id serial not null,
+	name varchar(255) not null,
+	start_year int not null,
+	start_month int not null,
+	start_day int not null,
+	end_year int not null,
+	end_month int not null,
+	end_day int not null,
+	note text,
+	lord_bishop_diocese_id int not null,
+	constraint fk_lord_bishop_diocese foreign key (lord_bishop_diocese_id) references lord_bishop_dioceses(id),
+	primary key (id)
+);
