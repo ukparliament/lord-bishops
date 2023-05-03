@@ -142,4 +142,29 @@ module IMPORT
       translation.save
     end
   end
+  
+  # ## A method to import lord bishop diocese names.
+  def import_lord_bishop_diocese_names
+    puts "Importing lord bishop diocese names"
+
+    # For each row in the lord bishop diocese names data file ...
+    CSV.foreach( 'db/data/lord-bishop-diocese-names.tsv', :col_sep => "\t" ) do |row|
+      
+      # ... we find the lord bishop diocese ...
+      lord_bishop_diocese = LordBishopDiocese.find_by_link_on( row[0] )
+      
+      # ... and create a new lord bishop diocese name record.
+      lord_bishop_diocese_name = LordBishopDioceseName.new
+      lord_bishop_diocese_name.name = row[1]
+      lord_bishop_diocese_name.start_year = row[2]
+      lord_bishop_diocese_name.start_month = row[3]
+      lord_bishop_diocese_name.start_day = row[4]
+      lord_bishop_diocese_name.end_year = row[5]
+      lord_bishop_diocese_name.end_month = row[6]
+      lord_bishop_diocese_name.end_day = row[7]
+      lord_bishop_diocese_name.note = row[8]
+      lord_bishop_diocese_name.lord_bishop_diocese = lord_bishop_diocese
+      lord_bishop_diocese_name.save
+    end
+  end
 end
