@@ -120,7 +120,7 @@
         <title>Class with Attributes</title>
         <g id="Graphic_19">
           <title>Attributes</title>
-          <rect x="-766" y="612" width="328" height="74" fill="aqua"/>
+          <rect x="-766" y="612" width="328" height="74" fill="#ccc"/>
           <rect x="-766" y="612" width="328" height="74" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-760 618)" fill="#515556">
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
@@ -130,7 +130,7 @@
         </g>
         <g id="Graphic_18">
           <title>Class Name</title>
-          <rect x="-766" y="586" width="328" height="26" fill="aqua"/>
+          <rect x="-766" y="586" width="328" height="26" fill="#ccc"/>
           <rect x="-766" y="586" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-760 590)" fill="#515556">
             <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="126.9365" y="13">seniorities</tspan>
