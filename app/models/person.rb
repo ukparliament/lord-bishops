@@ -26,6 +26,20 @@ class Person < ApplicationRecord
     year_of_death_display
   end
   
+  def is_lifespan_redacted?
+    
+    # We redact lifespan - birth and death dates - by default.
+    is_lifespan_redacted = true
+    
+    # If the person has a year of death ...
+    if self.year_of_death
+      
+      # ... we consider them dead and unredact their lifespan.
+      is_lifespan_redacted = false
+    end
+    is_lifespan_redacted
+  end
+  
   def lifespan
     self.date_of_birth + ' - ' + self.date_of_death
   end
