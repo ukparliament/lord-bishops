@@ -1,7 +1,7 @@
 class LordBishopDioceseIncumbencyController < ApplicationController
   
   def index
-    @page_title = 'Lord bishop diocese incumbency'
+    @page_title = 'Lord bishop diocese incumbencies'
     @lord_bishopric_diocese_incumbencies = LordBishopDioceseIncumbency.find_by_sql(
       "
         SELECT lbdi.*, p.surname AS person_surname, p.forenames AS person_forenames, lbd.most_recent_name AS lord_bishop_diocese_most_recent_name, lbd.is_archdiocese AS lord_bishop_diocese_is_archdiocese
