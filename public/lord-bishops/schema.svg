@@ -220,7 +220,7 @@
         <title>Class with Attributes</title>
         <g id="Graphic_61">
           <title>Attributes</title>
-          <rect x="-1198.5" y="94" width="328" height="228" fill="#ccc"/>
+          <rect x="-1198.5" y="94" width="328" height="228" fill="yellow"/>
           <rect x="-1198.5" y="94" width="328" height="228" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-1192.5 100)" fill="#515556">
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
@@ -237,7 +237,7 @@
         </g>
         <g id="Graphic_60">
           <title>Class Name</title>
-          <rect x="-1198.5" y="68" width="328" height="26" fill="#ccc"/>
+          <rect x="-1198.5" y="68" width="328" height="26" fill="yellow"/>
           <rect x="-1198.5" y="68" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-1192.5 72)" fill="#515556">
             <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="72.8955" y="13">lord_bishop_diocese_names</tspan>
@@ -245,7 +245,7 @@
         </g>
       </g>
       <g id="Line_62">
-        <line x1="-851" y1="208" x2="-782.5" y2="208" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <line x1="-851" y1="208" x2="-782.5" y2="208" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
       </g>
       <g id="Group_71">
         <title>Class with Attributes</title>
