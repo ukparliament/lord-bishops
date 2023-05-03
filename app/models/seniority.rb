@@ -1,0 +1,2 @@
+class Seniority < ApplicationRecord
+end
