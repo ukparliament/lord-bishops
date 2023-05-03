@@ -1,5 +1,5 @@
 <div id="details">
-	<%= content_tag( 'p', @person.lifespan ) %>
+	<%= content_tag( 'p', @person.lifespan ) unless @person.is_lifespan_redacted? %>
 
 	<%= content_tag( 'p', "Wikidata ID: #{link_to( @person.wikidata_id, "https://www.wikidata.org/wiki/#{@person.wikidata_id}" )}".html_safe ) if @person.wikidata_id %>
 
