@@ -144,10 +144,10 @@
           <rect x="-289.25" y="579" width="328" height="140" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-283.25 585)" fill="#515556">
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="35">person_id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="57">seniority_id</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="79">start_on</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="101">end_on</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="35">start_on</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="57">end_on</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="79">person_id</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="101">seniority_id</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="123">note</tspan>
           </text>
         </g>
@@ -155,7 +155,7 @@
           <title>Class Name</title>
           <rect x="-289.25" y="553" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
           <text transform="translate(-283.25 557)" fill="#515556">
-            <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="92.623" y="13">seniority_incumbency</tspan>
+            <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="87.6895" y="13">seniority_incumbencies</tspan>
           </text>
         </g>
       </g>
