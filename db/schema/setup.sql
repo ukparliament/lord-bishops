@@ -1,3 +1,4 @@
+drop table if exists seniority_incumbencies;
 drop table if exists seniorities;
 drop table if exists lord_bishop_diocese_names;
 drop table if exists translations;
@@ -102,5 +103,16 @@ create table seniorities (
 	id serial not null,
 	rank int not null,
 	is_named_seniority boolean default false,
+	primary key (id)
+);
+create table seniority_incumbencies (
+	id serial not null,
+	start_on date not null,
+	end_on date,
+	person_id int not null,
+	seniority_id int not null,
+	note text,
+	constraint fk_person foreign key (person_id) references people(id),
+	constraint fk_seniority foreign key (seniority_id) references seniorities(id),
 	primary key (id)
 );
