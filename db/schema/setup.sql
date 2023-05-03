@@ -1,3 +1,4 @@
+drop table if exists seniorities;
 drop table if exists lord_bishop_diocese_names;
 drop table if exists translations;
 drop table if exists lord_bishop_diocese_incumbencies;
@@ -95,5 +96,11 @@ create table lord_bishop_diocese_names (
 	note text,
 	lord_bishop_diocese_id int not null,
 	constraint fk_lord_bishop_diocese foreign key (lord_bishop_diocese_id) references lord_bishop_dioceses(id),
+	primary key (id)
+);
+create table seniorities (
+	id serial not null,
+	rank int not null,
+	is_named_seniority boolean default false,
 	primary key (id)
 );
