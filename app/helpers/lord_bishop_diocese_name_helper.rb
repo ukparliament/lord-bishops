@@ -1,0 +1,2 @@
+module LordBishopDioceseNameHelper
+end
