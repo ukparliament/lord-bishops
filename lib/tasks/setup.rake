@@ -5,5 +5,6 @@ task :setup => [
   :import_lord_bishop_diocese_incumbency_end_reasons,
   :import_lord_bishop_diocese_incumbencies,
   :import_translations,
-  :import_lord_bishop_diocese_names] do
+  :import_lord_bishop_diocese_names,
+  :import_seniorities] do
 end

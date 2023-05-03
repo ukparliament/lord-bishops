@@ -167,4 +167,19 @@ module IMPORT
       lord_bishop_diocese_name.save
     end
   end
+
+  # ## A method to import seniorities.
+  def import_seniorities
+    puts "Importing seniorities"
+
+    # For each row in the seniorities data file ...
+    CSV.foreach( 'db/data/seniorities.tsv', :col_sep => "\t" ) do |row|
+      
+      # ... we create a new seriority record.
+      seniority = Seniority.new
+      seniority.rank = row[0]
+      seniority.is_named_seniority = row[1]
+      seniority.save
+    end
+  end
 end
