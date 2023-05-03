@@ -1,6 +1,7 @@
 class LordBishopDiocese < ApplicationRecord
   
   belongs_to :established_church
+  has_many :lord_bishop_diocese_names, -> { order( :start_year, :start_month, :start_day ) }
   
   def incumbent_title
     incumbent_title = ''
