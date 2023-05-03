@@ -1,1 +1,14 @@
-<%= content_tag( 'li', link_to( person.list_display_label, person_show_url( :person => person ) ) ) %>
+<tr>
+
+<!-- 
+<td>
+<a href="<%= person_show_url( :person => person ) %>">
+<strong><%= person.surname %></strong></a>, <%= person.forenames %></td>
+<td><%= person.year_of_birth_display %></td>
+
+<td><%= person.year_of_death_display %></td>
+
+ -->
+
+<%= content_tag( 'td', link_to( person.list_display_label, person_show_url( :person => person ) ) ) %>
+</tr>
