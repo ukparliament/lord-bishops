@@ -1,0 +1,5 @@
+<li>
+	<%= content_tag( 'h2', lord_bishop_diocese_name.name ) %>
+	<%= content_tag( 'p', lord_bishop_diocese_name.lifespan ) %>
+	<%= content_tag( 'p', "Most recent name: #{link_to( lord_bishop_diocese_name.most_recent_name, lord_bishop_diocese_show_url( :lord_bishop_diocese => lord_bishop_diocese_name.lord_bishop_diocese_id ) )}".html_safe ) %>
+</li>
