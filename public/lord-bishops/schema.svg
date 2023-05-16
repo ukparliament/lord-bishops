@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="-1199.5 -275 1691 995" width="1691" height="995">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="-1199.5 -275 1928.5 1426" width="1928.5" height="1426">
   <defs>
     <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="DoubleBar_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -5 16 10" markerWidth="16" markerHeight="10" color="black">
       <g>
@@ -13,9 +13,9 @@
       </g>
     </marker>
   </defs>
-  <g id="Canvas_1" stroke-opacity="1" fill="none" stroke="none" fill-opacity="1" stroke-dasharray="none">
+  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill-opacity="1" fill="none">
     <title>Canvas 1</title>
-    <rect fill="white" x="-1199.5" y="-275" width="1691" height="995"/>
+    <rect fill="white" x="-1199.5" y="-275" width="1928.5" height="1426"/>
     <g id="Canvas_1_Layer_1">
       <title>Layer 1</title>
       <g id="Group_47">
@@ -120,19 +120,18 @@
         <title>Class with Attributes</title>
         <g id="Graphic_19">
           <title>Attributes</title>
-          <rect x="-766" y="612" width="328" height="74" fill="#ccc"/>
-          <rect x="-766" y="612" width="328" height="74" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-          <text transform="translate(-760 618)" fill="#515556">
+          <rect x="-767" y="623" width="328" height="52" fill="#ccc"/>
+          <rect x="-767" y="623" width="328" height="52" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <text transform="translate(-761 629)" fill="#515556">
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
             <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="35">rank</tspan>
-            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="57">is_named_seniority</tspan>
           </text>
         </g>
         <g id="Graphic_18">
           <title>Class Name</title>
-          <rect x="-766" y="586" width="328" height="26" fill="#ccc"/>
-          <rect x="-766" y="586" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-          <text transform="translate(-760 590)" fill="#515556">
+          <rect x="-767" y="597" width="328" height="26" fill="#ccc"/>
+          <rect x="-767" y="597" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <text transform="translate(-761 601)" fill="#515556">
             <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="126.9365" y="13">seniorities</tspan>
           </text>
         </g>
@@ -163,7 +162,7 @@
         <line x1="-67.75878" y1="545.8924" x2="147.813" y2="470.49595" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
       </g>
       <g id="Line_12">
-        <line x1="-308.75" y1="649" x2="-422.5" y2="649" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <line x1="-308.75" y1="649" x2="-423.5" y2="649" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
       </g>
       <g id="Group_50">
         <title>Class with Attributes</title>
@@ -272,6 +271,62 @@
       </g>
       <g id="Line_74">
         <line x1="-603" y1="4.5" x2="-603" y2="-114.5" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Group_75">
+        <title>Class with Attributes</title>
+        <g id="Graphic_77">
+          <title>Attributes</title>
+          <rect x="-289.25" y="952.5" width="328" height="140" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <text transform="translate(-283.25 958.5)" fill="#515556">
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="13">id</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="35">start_on</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="57">end_on</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="79">person_id</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="101">seniority_id</tspan>
+            <tspan font-family="Avenir" font-size="13" fill="#515556" x="0" y="123">note</tspan>
+          </text>
+        </g>
+        <g id="Graphic_76">
+          <title>Class Name</title>
+          <rect x="-289.25" y="926.5" width="328" height="26" stroke="#b9c0c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <text transform="translate(-283.25 930.5)" fill="#515556">
+            <tspan font-family="Avenir" font-weight="bold" font-size="13" fill="#515556" x="63.737" y="13">named_seniority_incumbencies</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_78">
+        <line x1="-164.08124" y1="915.8883" x2="-546.207" y2="683.5335" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Line_79">
+        <line x1="-101.36955" y1="911.4038" x2="191.31636" y2="567.0484" marker-end="url(#DoubleBar_Marker)" marker-start="url(#CrowBall_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_80">
+        <rect x="-185.25" y="701.5" width="120" height="70.5" fill="white"/>
+        <rect x="-185.25" y="701.5" width="120" height="70.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-180.25 718.302)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="4.016" y="15">1-40 including </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="23.72" y="33.448">5 named</tspan>
+        </text>
+      </g>
+      <g id="Graphic_81">
+        <rect x="-185.25" y="1080" width="120" height="70.5" fill="white"/>
+        <rect x="-185.25" y="1080" width="120" height="70.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-180.25 1087.578)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="30.84" y="15">Top 21 </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="13.808" y="33.448">excluding 5 </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="30.392" y="51.895996">named</tspan>
+        </text>
+      </g>
+      <g id="Graphic_82">
+        <rect x="485" y="439.5" width="243.5" height="70.5" fill="white"/>
+        <rect x="485" y="439.5" width="243.5" height="70.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(490 442.25)" fill="#212121">
+          <tspan font-family="Helvetica" font-size="11" fill="#212121" x="0" y="10">Lords Spiritual (Women) Act 2015</tspan>
+          <tspan font-family="Helvetica" font-size="11" fill="#212121" x="0" y="23">18 May 2015</tspan>
+          <tspan font-family="Helvetica" font-size="11" fill="#212121" x="0" y="36">to</tspan>
+          <tspan font-family="Helvetica" font-size="11" fill="#212121" x="0" y="49">17 May 2025</tspan>
+          <tspan font-family="Helvetica" font-size="11" fill="#212121" x="0" y="62">https://www.legislation.gov.uk/ukpga/2015/18</tspan>
+        </text>
       </g>
     </g>
   </g>
